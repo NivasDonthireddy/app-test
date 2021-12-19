@@ -1,4 +1,7 @@
-<table>
+<table [class.ItalicText] ='AddClass'>
+    <th [attr.colspan]="columnSpan">
+        Employee Details
+    </th>
     <tr>
         <td>FirstName</td>
         <td>{{firstName}}</td>
@@ -16,3 +19,6 @@
         <td>{{age}}</td>
     </tr>
 </table>
+<button [style.color]= "isColored?'blue':'red'" [style.font-weight]="isBold?'bold':'normal'">Submit</button>
+<br>
+<button [ngStyle]="addStyles()" >NGStylized</button>
