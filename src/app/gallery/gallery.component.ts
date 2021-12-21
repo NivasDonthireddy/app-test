@@ -1,4 +1,6 @@
+import { Message } from "@angular/compiler/src/i18n/i18n_ast";
 import { Component } from "@angular/core";
+import { ColdObservable } from "rxjs/internal/testing/ColdObservable";
 
 @Component ({
     selector: 'my-gallery',
@@ -14,7 +16,8 @@ export class GalleryComponent{
     getTitle():string {
         return "Hell-Bound Poster";
     }
-    imgSource : string = './Pisaasu.jfif';
     isDisabled: boolean = false;
-
+    OnClick() : void {
+        console.log("Button Clicked");
+    }
 }
