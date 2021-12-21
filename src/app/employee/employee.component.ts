@@ -25,4 +25,10 @@ export class EmployeeComponent {
         };
         return styles;
     }
+
+    showDetails: boolean = false;
+    toggleDetails():void {
+        this.showDetails =  !this.showDetails;
+    }
+    name : string = "Tom";
 }

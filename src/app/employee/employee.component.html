@@ -10,15 +10,21 @@
         <td>LastName</td>
         <td>{{lastName}}</td>
     </tr>
-    <tr>
+    <tr *ngIf="showDetails">
         <td>Gender</td>
         <td>{{gender}}</td>
     </tr>
-    <tr>
+    <tr *ngIf="showDetails">
         <td>Age</td>
         <td>{{age}}</td>
     </tr>
+
 </table>
+<button class="submit-btn" on-click="toggleDetails()">{{showDetails?'HideDetails':'ShowDetails'}}</button>
+<hr>
+<p>Style Binding</p>
 <button [style.color]= "isColored?'blue':'red'" [style.font-weight]="isBold?'bold':'normal'">Submit</button>
-<br>
 <button [ngStyle]="addStyles()" >NGStylized</button>
+<hr>
+Name : <input [(ngModel)]='name' /><br>
+You Entered : {{name}}
